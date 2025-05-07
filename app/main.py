@@ -1,7 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 
-from . import config
+import app.config as config
 
 app = FastAPI(title="A FastAPI Project")
 
