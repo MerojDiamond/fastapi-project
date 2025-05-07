@@ -1,5 +1,6 @@
-from fastapi import FastAPI
 import uvicorn
+from fastapi import FastAPI
+
 from . import config
 
 app = FastAPI(title="A FastAPI Project")

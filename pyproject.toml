@@ -14,3 +14,18 @@ dependencies = [
     "sqlalchemy[asyncio]>=2.0.40",
     "uvicorn>=0.34.2",
 ]
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "isort>=6.0.1",
+    "ruff>=0.11.8",
+]
+
+[tool.ruff]
+exclude = [
+    ".venv",
+    "alembic",
+    "tests/",
+    "**/__init__.py",
+]

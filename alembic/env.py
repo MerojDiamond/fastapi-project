@@ -8,6 +8,9 @@ from sqlalchemy.ext.asyncio import async_engine_from_config
 from alembic import context
 from app import config as app_config
 
+from app.db import Base
+from app.db.models import *
+
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
@@ -22,8 +25,7 @@ if config.config_file_name is not None:
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 
-from app.db import Base
-from app.db.models import *
+
 target_metadata = Base.metadata
 
 # other values from the config, defined by the needs of env.py,
